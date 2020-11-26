@@ -13,7 +13,7 @@ kolor jasny-stary niebieski - 3,169,244 03A9F4
   --box-shadow: -1rem 0 2rem #c3c3c3;
   --text_tlo: #000;
   --text_strona: #FFF;
-  --text_strona_a: #c3c3c3;
+  --text_strona_a: #a1a1a1;
   --text_strona_h: linear-gradient(90deg, rgba(232,232,232,1) 0%, rgba(208,208,208,1) 47%, rgba(149,149,149,1) 100%);
   --color_cien: #c3c3c3;
   --color_header: linear-gradient(90deg, rgba(78, 73, 76,1) 0%, rgba(214, 212, 206,1) 47%, rgba(78, 73, 76,1) 100%);
@@ -100,7 +100,7 @@ header .tytul_nag h6 {
 header .tytul_nag .into {
   letter-spacing: 1px;
 }
-/* nagĂłwek zst */
+/* nagówek zst */
 .tytul_nag {
   display: flex;
   flex-direction: column;
@@ -113,7 +113,7 @@ header .tytul_nag .into {
 .tytul_nag h2 {
   font-size: 1.6vw;
 }
-/* koniec nagĹĂłwka zst */
+/* koniec nagłówka zst */
 .container-fluid {
   width: 100%;
   margin: 0;
@@ -158,6 +158,7 @@ header .tytul_nag .into {
   padding: .4vh .8vw .4vh .8vw;
   border-radius: .2vw;
   border: .1vw solid var(--tlo);
+  float: right;
 }
 .btn:hover {
   background-image: var(--tlo);
@@ -169,7 +170,6 @@ header .tytul_nag .into {
   color: var(--text_shadow);
   border: .1vw solid var(--color_cien);
 }
-
 /* banner slider */
 .slider {
   overflow: hidden;
@@ -1099,10 +1099,252 @@ a {
   background: var(--color_belka_tlo);
 }
 .dokumenty_szkola {
-  border: 1px solid #ff0000;
+  width: 100%;
+  height: 36vh;
+  z-index: 333;
+}
+.dokumenty_szkola ul {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  text-transform: uppercase;
+}
+.dokumenty_szkola ul li {
+  list-style: none;
+  padding: 8vh 2vw 0 1vh;
+  font-size: .8vw;
+}
+.dokumenty_szkola ul li a {
+  text-decoration: none;
+  color: var(--text_strona);
+}
+.dokumenty_szkola ul li:hover, .dokumenty_szkola ul li a:hover {
+  color: var(--text_strona_a);
+}
+.dokumenty_szkola ul li .fas {
+  padding: 0 .2vw 0 .6vw;
+}
+.doc_lista {
+  display: none;
+}
+.dokumenty_szkola ul li:hover .doc_lista {
+  display: block;
+  transition: 2s;
+}
+.dokumenty_szkola .doc_lista {
+  padding: 1vh 0 0 1vw;
+}
+.dokumenty_szkola .doc_lista ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-transform: none;
+}
+.dokumenty_szkola .doc_lista ul li {
+  padding: 0 1vw 0 1vh;
+  float: left;
+  font-size: .6vw;
+}
+/******************* service_szkola start **********/
+.service_szkola {
+  padding: 6vh 0 4vh 0;
+}
+.wspolpraca {
+  padding: 4vh 0 4vh 0;
+}
+.service ul, .wspolpraca ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+}
+.service .icon_sevice, .wspolpraca .icon_sevice {
+  margin: 1vw;
+  text-align: center;
+}
+.service .icon_sevice img {
+  height: 120px;
+  width: 100%;
+  filter: opacity(80%);
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+}
+.wspolpraca .icon_sevice img {
+  height: 55px;
+  width: 100%;
+  filter: opacity(80%);
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%); 
+  }
+.service .icon_sevice img:hover, .wspolpraca .icon_sevice img:hover {
+  filter: opacity(100%);
+}
+/******************* service_szkola koniec **********/
+/* kontak dane teleadresowe */
+.dane_adresowe {
+  margin: 4vh 0 4vh 0;
+}
+.dane_adresowe .dane_adres ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: space-around;
+  padding: 2vh 0 2vh 0;
+}
+.dane_adresowe .dane_adres ul li {
+  list-style: none;
+  padding: 0 1vw 0 .8vw;
+  font-size: 1vw;
+  font-weight: 400;
+  color: var(--text_strona_a);
+}
+
+/* form */
+.form {
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40vh;
+}
+.form h6 {
+  text-transform: uppercase;
+  text-align: center;
+}
+.form_control {
+  width: 100%;
+  padding: .2vh .2vw;
+}
+.form_control .input_grup {
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(312px,1fr));
+}
+.form_control .input_grup .input_size {
+  position: relative;
+  width: 100%;
+  padding: 0 1vw;
+  margin: 3vh 0 1vh 0;
+  transition: .5s;
+}
+.form_control .input_grup .input_box {
+  position: relative;
+  width: 100%;
+  height: 40px;
+}
+.form_control .input_grup .input_box input,
+.form_control .input_grup .input_box.textarea textarea {
+  position: absolute;
   width: 100%;
   height: 100%;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  outline: none;
+  font-size: 1.4rem;
+  padding: 0 1vw;
+  z-index: 1;
+  color: var(--text_tlo);
 }
+.form_control .input_grup .input_box .text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  line-height: 40px;
+  font-size: 1.2rem;
+  padding: 0 1vw;
+  display: block;
+  transition: .5s;
+  pointer-events: none;
+}
+.form_control .input_grup .input_box input:focus + .text,
+.form_control .input_grup .input_box input:valid + .text {
+  top: -35px;
+  left: -10px;
+}
+.form_control .input_grup .input_box .line {
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: var(--text_strona);
+  transition: .5s;
+  border-radius: .2vw;
+  pointer-events: none;
+}
+.form_control .input_grup .input_box input:focus ~ .line,
+.form_control .input_grup .input_box input:valid ~ .line {
+  height: 100%;
+}
+.form_control .input_grup .input_box.textarea {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  padding: .1vh 0;
+}
+.form_control .input_grup .input_box.textarea textarea {
+  height: 100%;
+  resize: none;
+}
+.form_control .input_grup .input_box textarea:focus + .text,
+.form_control .input_grup .input_box textarea:valid + .text {
+  top: -35px;
+  left: -10px;
+}
+.form_control .input_grup .input_box textarea:focus ~ .line,
+.form_control .input_grup .input_box textarea:valid ~ .line {
+  height: 100%;
+}
+/* form */
+
+/* kontak dane teleadresowe koniec */
+.blackleo {
+  color: #eee;
+}
+.blackleo .leo {
+  font-size: .6vw;
+  font-weight: 200;
+}
+.blackleo .leol {
+  font-size: .6vw;
+  font-weight: 200;
+  text-align: right;
+  justify-content: right;
+}
+.blackleo .leol a {
+  text-decoration: none;
+  color: #eee;
+  letter-spacing: 1px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* galerie strefa ucznia koniec   */
 /******************* parallax *****************/
 .parallax {
@@ -1116,7 +1358,7 @@ a {
 }
 
 .parallax2 {
-  background-image: url(/img/parallax/pliki_wifi.webp");
+  background-image: url("/img/parallax/pliki_wifi.webp");
   min-height: 100px;
 }
 .parallax3 {
@@ -1141,6 +1383,7 @@ a {
   background-color: transparent;
 }
 /******************* parallax koniec **********/
+
 
 
 
