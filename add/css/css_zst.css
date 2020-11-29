@@ -3528,17 +3528,30 @@ figcaption {
 
 }
 /* media tel 568 do 811.98 */
+/* media tel 736 do 811.98 */
+@media (min-width: 736px) and (max-width: 811.98px) {
+  
 
+}
+/* media tel 736 do 811.98 */
+/* media tel 812 do 1023.98 */
+@media (min-width: 812px) and (max-width: 1023.98px) {
+  
 
+}
+/* media tel 812 do 1023.98 */
+/* tablety 1024 do 1439.98 */
+@media (min-width: 1024px) and (max-width: 1439.98px) {
+  
 
+}
+/* tablety 1024 do 1439.98 */
+/* komp 1440 do 1919.98 */
+@media (min-width: 1440px) and (max-width: 1919.98px) {
+  
 
-
-
-
-
-
-
-
+}
+/* komp 1440 do 1919.98 */
 
 
 
